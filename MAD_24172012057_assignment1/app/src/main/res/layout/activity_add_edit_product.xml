@@ -1,57 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
 
         <ImageView
             android:id="@+id/imgPick"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_image_placeholder" />
+            android:src="@drawable/ic_placeholder"
+            android:scaleType="centerCrop"
+            android:contentDescription="Product image preview" />
 
         <Button
             android:id="@+id/btnPick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pick Image" />
+            android:text="Pick Image"
+            android:layout_marginTop="12dp"/>
 
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Product Name" />
+            android:hint="Product Name"
+            android:padding="12dp"
+            android:layout_marginTop="12dp" />
 
         <EditText
             android:id="@+id/etBrand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Brand" />
+            android:hint="Brand"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
 
         <EditText
             android:id="@+id/etPrice"
-            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price" />
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
 
         <EditText
             android:id="@+id/etDesc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description" />
+            android:layout_height="120dp"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SAVE PRODUCT" />
+            android:text="SAVE PRODUCT"
+            android:layout_marginTop="12dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
 
     </LinearLayout>
 </ScrollView>
