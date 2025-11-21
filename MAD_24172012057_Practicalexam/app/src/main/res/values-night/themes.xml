@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MAD_24172012057_Practicalexam" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorSecondary">#1976D2</item>
+
+    </style>
+</resources>

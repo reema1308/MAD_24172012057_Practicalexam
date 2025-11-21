@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:backgroundTint="#FFD700"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="6dp"
+        android:clipToOutline="true" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Dr. Emily Chen"/>
+
+
+    <TextView
+        android:id="@+id/tvRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#666666"
+        android:text="AI Researcher"/>
+
+
+</LinearLayout>

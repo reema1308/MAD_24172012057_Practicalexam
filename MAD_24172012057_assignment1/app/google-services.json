@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "YOUR_PROJECT_NUMBER",
-    "firebase_url": "YOUR_FIREBASE_DATABASE_URL",
-    "project_id": "YOUR_PROJECT_ID",
-    "storage_bucket": "YOUR_STORAGE_BUCKET_NAME.appspot.com"
+    "project_number": "793074505884",
+    "project_id": "e-pharmacy-8b706",
+    "storage_bucket": "e-pharmacy-8b706.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "YOUR_MOBILE_SDK_APP_ID",
+        "mobilesdk_app_id": "1:793074505884:android:76af0f015c27085fb53559",
         "android_client_info": {
           "package_name": "com.example.mad_24172012057_assignment1"
         }
@@ -16,12 +15,12 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "YOUR_API_KEY_CURRENT"
+          "current_key": "AIzaSyADsDDZ05fGtxzAEybOC6Cyk0yMZTQevXw"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_clients": []
+          "other_platform_oauth_client": []
         }
       }
     }

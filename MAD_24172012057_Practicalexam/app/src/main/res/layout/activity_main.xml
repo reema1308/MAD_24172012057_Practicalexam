@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FB">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- ==================== HEADER ==================== -->
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- ==================== TITLE BLOCK ==================== -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tech Conference 2025"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/headerImage"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mehsana, Gujarat | 2.5 km away"
+            android:textColor="#666"
+            android:textSize="14sp"
+            android:paddingStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join us for a deep dive into the future of technology."
+            android:textColor="#444"
+            android:textSize="14sp"
+            android:paddingStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <!-- ==================== LIVE INDICATOR ==================== -->
+
+        <View
+            android:id="@+id/redDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/red_dot"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/subtitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/liveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Updates Active"
+            android:textColor="#E91E63"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/redDot"
+            app:layout_constraintTop_toTopOf="@id/redDot" />
+
+
+        <!-- ==================== SPEAKERS ==================== -->
+
+        <TextView
+            android:id="@+id/featuredHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Featured Speakers"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/liveText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/speakerScroll"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:scrollbars="none"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/featuredHeading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <!-- SPEAKER CARD 1 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card1"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/speaker_card"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/speaker1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Emily Chen"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/img1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/role1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Researcher"
+                        android:textSize="10sp"
+                        android:textColor="#777"
+                        app:layout_constraintTop_toBottomOf="@id/name1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- SPEAKER CARD 2 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/speaker_card"
+                    android:padding="10dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/card1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/speaker2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jake Wharton"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/img2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/role2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android GDE"
+                        android:textSize="10sp"
+                        android:textColor="#777"
+                        app:layout_constraintTop_toBottomOf="@id/name2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+
+        <!-- ==================== SCHEDULE TITLE ==================== -->
+
+        <TextView
+            android:id="@+id/scheduleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/speakerScroll"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <!-- ==================== FILTER ROW ==================== -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filterRow"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/scheduleTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/filterAll"
+                android:layout_width="79dp"
+                android:layout_height="34dp"
+                android:background="@drawable/filter_selected"
+                android:gravity="center"
+                android:text="ALL"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/filterKeynote"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="KEYNOTE"
+                android:background="@drawable/filter_unselected"
+                android:textColor="#000"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/filterAll"
+                app:layout_constraintTop_toTopOf="@id/filterAll" />
+
+            <TextView
+                android:id="@+id/filterWorkshop"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="WORKSHOP"
+                android:background="@drawable/filter_unselected"
+                android:textColor="#000"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/filterKeynote"
+                app:layout_constraintTop_toTopOf="@id/filterKeynote" />
+
+            <TextView
+                android:id="@+id/filterNetworking"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="NETWORKING"
+                android:background="@drawable/filter_unselected"
+                android:textColor="#000"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/filterWorkshop"
+                app:layout_constraintTop_toTopOf="@id/filterWorkshop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- ==================== CARD 1 ==================== -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_card"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/filterRow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/timeA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 AM"
+                android:textColor="#9C27B0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opening Ceremony"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@id/timeA"
+                app:layout_constraintTop_toTopOf="@id/timeA" />
+
+            <TextView
+                android:id="@+id/categoryA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALL"
+                android:textColor="#888"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/titleA"
+                app:layout_constraintTop_toBottomOf="@id/titleA"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/descA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Detailed Info: Kick-off the event with a welcoming speech."
+                android:textColor="#555"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/categoryA"
+                app:layout_constraintStart_toStartOf="@id/timeA"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/roomA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room 304 – East Wing"
+                android:textColor="#777"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/descA"
+                app:layout_constraintStart_toStartOf="@id/descA" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- ==================== CARD 2 ==================== -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_card"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/timeB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00 AM"
+                android:textColor="#9C27B0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Future of AI"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@id/timeB"
+                app:layout_constraintTop_toTopOf="@id/timeB" />
+
+            <TextView
+                android:id="@+id/categoryB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KEYNOTE"
+                android:textColor="#888"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/titleB"
+                app:layout_constraintTop_toBottomOf="@id/titleB"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/descB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Detailed Info: Keynote by Dr. Emily Chen on Generative AI trends."
+                android:textColor="#555"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/categoryB"
+                app:layout_constraintStart_toStartOf="@id/timeB"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/roomB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room 304 – East Wing"
+                android:textColor="#777"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/descB"
+                app:layout_constraintStart_toStartOf="@id/descB" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- ==================== CARD 3 ==================== -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_card"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/timeC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:30 AM"
+                android:textColor="#9C27B0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kotlin Multiplatform"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@id/timeC"
+                app:layout_constraintTop_toTopOf="@id/timeC" />
+
+            <TextView
+                android:id="@+id/categoryC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WORKSHOP"
+                android:textColor="#888"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/titleC"
+                app:layout_constraintTop_toBottomOf="@id/titleC"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/descC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Detailed Info: Hands-on workshop for mobile developers sharing code."
+                android:textColor="#555"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/categoryC"
+                app:layout_constraintStart_toStartOf="@id/timeC"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/roomC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room 304 – East Wing"
+                android:textColor="#777"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/descC"
+                app:layout_constraintStart_toStartOf="@id/descC" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- ==================== BUTTONS ==================== -->
+
+        <Button
+            android:id="@+id/btnTickets"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="Buy Tickets"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#fff"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCalendar" />
+
+        <Button
+            android:id="@+id/btnCalendar"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="Calendar"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardC"
+            app:layout_constraintStart_toEndOf="@id/btnTickets"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
